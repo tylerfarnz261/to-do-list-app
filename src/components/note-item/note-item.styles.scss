@@ -1,0 +1,19 @@
+
+
+.item-container{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.178);
+    max-width: 90%;
+    margin:15px;
+    div{
+        display:flex;
+    }
+
+    p{
+        padding: 10px;
+        font-size: 25px;
+    }
+
+}
