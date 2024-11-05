@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -6,6 +12,3 @@ body {
   background: radial-gradient(circle, transparent 20%, #FFF0D1 20%, #FFF0D1 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #FFF0D1 20%, #FFF0D1 80%, transparent 80%, transparent) 25px 25px, linear-gradient(#795757 2px, transparent 2px) 0 -1px, linear-gradient(90deg, #795757 2px, #FFF0D1 2px) -1px 0;
   background-size: 50px 50px, 50px 50px, 25px 25px, 25px 25px;}
 
-* {
-  margin: 0;
-}

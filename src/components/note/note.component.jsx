@@ -1,22 +1,19 @@
 import React, {useState} from 'react';
 import NoteItem from '../note-item/note-item.component';
-
+import { useNavigate } from 'react-router-dom';
 import TextInput from '../text-input/text-input.component';
 import './note.style.scss';
 
 
 
-function Note () {
+function Note ({note}) {
+    console.log(note.item);
+    const [itemList, setItemList] = useState(note.item);
+    const [clicked, setClicked] = useState(false);
+    const navigate = useNavigate();
 
-    const [noteList, setNoteList] = useState([
-        {
-            item: 'Buy Milk',
-            date: new Date()
-        }
-    ]);
-    
     function deleteNote(id){
-        setNoteList(prevNotes => {
+        setItemList(prevNotes => {
             return prevNotes.filter((noteItem, index) => {
                 return index!==id;
             });
@@ -25,29 +22,37 @@ function Note () {
 
     function addNote(newNote) {
     
-        setNoteList((previousItems) => {
+        setItemList((previousItems) => {
             return [...previousItems, newNote]
         })
 
     }
 
+    function handleClick() {
+        navigate('/new-note');
+    }
+
     return (
         <div className='note-container'>
             <div>
-                <h1 className='list-title'>Grocery List</h1>
+                <h1 className='list-title'>{note.title}</h1>
             </div>
             {
-                noteList.map((note, index) => {
+                itemList.map((note, index) => {
+                    console.log(note);
                     return (<NoteItem key={index} 
                         id = {index}
-                        item={note.item}
-                        date={note.date}
+                        item={note}
+                        date={note}
                         onDelete = {deleteNote}
                     />)
                 })
             }
-            <TextInput onAdd={addNote}/>
-            
+            {note.id === 'home' ? <button 
+            className='new-note-btn'
+            onClick={handleClick}
+            >New Note</button> : <TextInput onAdd={addNote}/>}
+
         </div>
     )
 }

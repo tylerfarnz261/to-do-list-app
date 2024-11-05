@@ -1,0 +1,43 @@
+.create-note {
+    background-color:#FFF0D1;
+    margin:100px auto auto;
+    border: 3px solid #3B3030;
+    border-radius: 20px;
+    width: 25%;
+    padding:20px;
+    opacity: 1;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+
+    .note-input {
+        width: 50%;
+        padding: 10px;
+        margin: 10px 0;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    .note-text {
+        font-size: 50px;
+        color: black;
+        margin: 10px 0;
+        font-family: 'Playwrite AR', serif;
+    }
+
+    .note-button {
+        margin: 10px 0;
+        padding: 10px 20px;
+        font-size: 16px;
+        color: #fff;
+        background-color: #795757;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .note-button:hover {
+        background-color: #3B3030;
+    }
+}

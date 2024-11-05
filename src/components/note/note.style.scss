@@ -1,20 +1,32 @@
 .note-container{
     background-color:#FFF0D1;
-    margin:70px auto auto;
+    margin:100px auto auto;
     border: 3px solid #3B3030;
     border-radius: 20px;
     min-height: 500px;
     width: 25%;
     padding:20px;
     opacity: 1;
+    display:flex;
+    flex-direction: column;
 
     .list-title {
         margin:10px;
+        text-align: center;
         font-family: "Playwrite AR", serif;
     }
 
    
-
+    .new-note-btn{
+        background-color: #3B3030;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px;
+        margin: 10px;
+        cursor: pointer;
+        font-family: "Playwrite AR", serif;
+    }
 }
 
 .addIcon {

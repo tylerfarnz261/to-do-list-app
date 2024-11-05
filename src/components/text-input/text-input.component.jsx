@@ -18,10 +18,7 @@ function TextInput ({onAdd}) {
     }
 
     function addNote(){
-        onAdd({
-            item: newItemText,
-            date: new Date()
-        });
+        onAdd(newItemText);
         setExpanded(false);
         setNewItemText('');
     }
@@ -29,9 +26,8 @@ function TextInput ({onAdd}) {
     return(
         <div className='add-item-container'>
             <input onClick={expand} className='addItem' onChange={handleChange} type='text' placeholder='Add Item' name='newItemText' value={newItemText}/>
-            {/* Change to Premade Button? */}
             <Zoom in={isExpanded ? true : false}>
-                <Fab sx={{margin:'0px 15px', backgroundColor:"#795757"}}  size='small' onClick={addNote}  aria-label="add">
+                <Fab sx={{margin:'0px 5px', backgroundColor:"#795757"}}  size='small' onClick={addNote}  aria-label="add">
                     <AddIcon />
                 </Fab>
             </Zoom>
